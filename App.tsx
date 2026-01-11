@@ -136,10 +136,10 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5] flex flex-col">
       <Header currentView={view} onNavigate={setView} />
       
-      <main className="max-w-6xl mx-auto pb-20 px-4 w-full flex-grow">
+      <main className="max-w-[1800px] mx-auto pb-20 px-8 w-full flex-grow">
         {view === 'inicio' ? (
           <>
-            <section className="py-12 text-center max-w-4xl mx-auto">
+            <section className="py-12 text-center max-w-[1400px] mx-auto">
               {/* Perfil Incompleto Aviso */}
               {!userStats.displayName && (
                 <div className="mb-8 bg-blue-600/10 border border-blue-600/30 p-4 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 animate-in slide-in-from-top-4 duration-500">
@@ -181,16 +181,16 @@ const App: React.FC = () => {
                 </button>
               </div>
               
-              <h1 className="text-4xl font-extrabold text-white mb-4 tracking-tight">
+              <h1 className="text-5xl font-extrabold text-white mb-4 tracking-tight">
                 Olá, {userStats.displayName || 'Estudante'}!
               </h1>
-              <p className="text-lg text-neutral-400 font-light max-w-2xl mx-auto">
+              <p className="text-xl text-neutral-400 font-light max-w-3xl mx-auto">
                 Seu progresso no <span className="text-blue-500 font-medium">NexusBQ</span> está excelente. 
                 Ciclo Atual: <span className="text-neutral-200">{userStats.ciclo}</span>.
               </p>
             </section>
             
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-[1600px] mx-auto">
               <StatsDashboard stats={userStats} ranking={ranking} />
             </div>
           </>
@@ -206,7 +206,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="border-t border-neutral-900 py-10 mt-auto">
-        <div className="max-w-6xl mx-auto px-4 text-center">
+        <div className="max-w-[1800px] mx-auto px-8 text-center">
           <p className="text-neutral-600 text-[10px] tracking-[0.3em] uppercase font-medium">
             &copy; {new Date().getFullYear()} NexusBQ &bull; Medicina PBL
           </p>
